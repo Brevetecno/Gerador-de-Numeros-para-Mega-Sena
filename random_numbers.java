@@ -1,27 +1,41 @@
 //Instagram @brevetecno
+// Youtube: Brevetecno
+//PSN: Brevestechno
 
 import java.util.*;
 
+
+// Classe de gerar números para Mega-Sena 
+// Gerador de 6 números de 1 a 60
 public class RandomNumbers{
 	
 	public static void main(String args[]){
 		
-		Random r = new Random();
+		// Classe de gerar números aleatórios
+		Random random = new Random();
 		
-		String resultado = "Números sorteados: ";
+		// Variavéis
+		int numbers[] = new int[6]; // Lista para guardar os 6 números sorteados
+		String result = ""; // String que irá guardar os valores a serem mostrado no final
 		
-		int ran[] = new int[6];
 		
 		for(int i = 0; i < 6; i++){
-			ran[i] = r.nextInt(60) + 1;
-			if(i < 5){
-				resultado += String.valueOf(ran[i]).toString() + " - ";
+			
+			// Adiciona o novo número sorteado dentro da lista de números
+			numbers[i] = random.nextInt(60) + 1;
+			
+			// Enquanto não chegar no último número irá adicionar um traço para separar os números
+			if(i < (6-1)){
+				// Adiciona traço
+				result += String.valueOf(numbers[i]).toString() + " - ";
 			}else{
-				resultado += String.valueOf(ran[i]).toString();
+				// Não adiciona
+				result += String.valueOf(numbers[i]).toString();
 			}
 		}  
 		
-		System.out.println(resultado);
+		// Mostra o resultado
+		System.out.println("Resultado: " + result);
 	
 	}
 }
