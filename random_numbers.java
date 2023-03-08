@@ -1,7 +1,3 @@
-//Instagram @brevetecno
-// Youtube: Brevetecno
-//PSN: Brevestechno
-
 import java.util.*;
 
 
@@ -10,7 +6,6 @@ import java.util.*;
 public class RandomNumbers{
 	
 	public static void main(String args[]){
-		
 		// Classe de gerar números aleatórios
 		Random random = new Random();
 		
@@ -29,13 +24,13 @@ public class RandomNumbers{
 				// Adiciona traço
 				result += String.valueOf(numbers[i]).toString() + " - ";
 			}else{
-				// Não adiciona
+				// Não adiciona traço depois do último número
 				result += String.valueOf(numbers[i]).toString();
 			}
 		}  
 		
 		// Mostra o resultado
-		System.out.println("Resultado: " + result);
+		System.out.println("Números gerados: " + result);
 	
 	}
 }
